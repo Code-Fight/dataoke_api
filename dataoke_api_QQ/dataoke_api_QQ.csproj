@@ -55,6 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dataoke_api.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataoke_api.resx</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +68,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dataoke_api.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>dataoke_api.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,9 +103,17 @@
     <None Include="Resources\2016112121421859.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{8f643833-6f55-49bb-9712-3c8de5c1ebe4}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FTools\FTools.csproj">
       <Project>{C0331D44-565C-4830-8189-75D2B8242C2D}</Project>
       <Name>FTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Services.csproj">
+      <Project>{319d1b13-3e51-4b6c-ab98-4549f39d7a2e}</Project>
+      <Name>Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\大淘客接口\大淘客接口.csproj">
       <Project>{70CE870A-A135-4B49-8DAA-1455249C0D69}</Project>

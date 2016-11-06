@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="quan_template" xml:space="preserve">
+    <value>http://uland.taobao.com/coupon/edetail?activityId={$activityId$}&amp;itemId={$itemId$}&amp;pid={$pid$}&amp;dx=1&amp;src=tkm_tl</value>
+    <comment>淘客二合一链接</comment>
+  </data>
+  <data name="weiHtml" xml:space="preserve">
+    <value>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+
+&lt;head&gt;
+
+	&lt;meta charset="utf-8"&gt;
+	&lt;title&gt;{$title$}&lt;/title&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+	&lt;meta name="robots" content="index,follow"&gt;
+	&lt;meta name="application-name" content="bootcss.com"&gt;
+	&lt;meta property="qc:admins" content="1603466166416277433363757477167" /&gt;
+
+	&lt;!-- Site CSS --&gt;
+	&lt;link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet"&gt;
+	&lt;link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"&gt;
+	&lt;link href="http://static.bootcss.com/www/assets/css/site.min.css?v5" rel="stylesheet"&gt;
+	&lt;style&gt;
+		.job-hot {
+			position: absolute;
+			color: #d9534f;
+			right: 0;
+			top: 15px;
+		}
+		
+		.kwd {
+			display: inline-block;
+			color: #272727;
+			background-color: #fff;
+			font-size: 1.1875em;
+			font-size: 1.1875em;
+			padding: .4em 1em;
+			border: 1px dashed #e60012;
+			-webkit-user-select: element;
+			text-align: left;
+			border-radius: 10px;
+		}
+	&lt;/style&gt;
+
+	&lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+	&lt;!--[if lt IE 9]&gt;
+      &lt;script src="http://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"&gt;&lt;/script&gt;
+      &lt;script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+
+	&lt;!-- Favicons --&gt;
+	&lt;link rel="apple-touch-icon-precomposed" href="http://static.bootcss.com/www/assets/ico/apple-touch-icon-precomposed.png"&gt;
+	&lt;link rel="shortcut icon" href="http://static.bootcss.com/www/assets/ico/favicon.png"&gt;
+
+	&lt;script&gt;
+      var _hmt = _hmt || [];
+    &lt;/script&gt;
+
+	&lt;link rel="canonical" href="http://www.bootcss.com/" /&gt;
+
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+	&lt;div class="navbar navbar-inverse navbar-fixed-top"&gt;
+		&lt;div class="container"&gt;
+			&lt;div class="navbar-header"&gt;
+
+				&lt;a class="navbar-brand text-center"&gt;淘宝内部优惠券&lt;/a&gt;
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+
+
+	&lt;div class="jumbotron masthead"&gt;
+		&lt;div class="container"&gt;
+			&lt;h1&gt;内部优惠券&lt;/h1&gt;
+			&lt;h2&gt;帮帮熊粉丝专属、超低价格、超级折扣的内部优惠券，让你Shopping不再剁手！&lt;/h2&gt;
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class="bc-social"&gt;
+		&lt;div class="container"&gt;
+			&lt;ul class="bc-social-buttons"&gt;
+				小编说：这些年，帮帮熊每天坚持为大家更新超值宝贝... 感谢您多年来的支持！无论再苦再苦，帮帮熊都会坚持下去！因为您的信任，我们会带着这份责任，做到极致...
+			&lt;/ul&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+
+	&lt;div class="container projects"&gt;
+
+		&lt;div class="projects-header page-header"&gt;
+			&lt;h2&gt;超值优惠券推荐&lt;/h2&gt;
+			&lt;p&gt;亲，下面这些宝贝都是摘录的一部分精品，想了解最新优惠信息以及获取定制推荐宝贝，可以加微信【zf97576419】为好友，邀请您进入帮帮熊粉丝群哦&lt;/p&gt;
+		&lt;/div&gt;
+
+		&lt;div class="row"&gt;
+				{$content$}
+			
+
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- /.container --&gt;
+
+
+	&lt;footer class="footer "&gt;
+
+	&lt;/footer&gt;
+
+	&lt;!-- Bootstrap core JavaScript
+    ================================================== --&gt;
+	&lt;!-- Placed at the end of the document so the pages load faster --&gt;
+	&lt;script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://cdn.bootcss.com/unveil/1.3.0/jquery.unveil.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://cdn.bootcss.com/scrollup/2.4.0/jquery.scrollUp.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://cdn.bootcss.com/toc/0.3.2/toc.min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://cdn.bootcss.com/jquery.matchHeight/0.5.2/jquery.matchHeight-min.js"&gt;&lt;/script&gt;
+	&lt;script src="http://static.bootcss.com/www/assets/js/site.min.js"&gt;&lt;/script&gt;
+	&lt;script&gt;
+     
+    &lt;/script&gt;
+
+	&lt;script language="javascript" type="text/javascript" src="http://js.users.51.la/19024652.js"&gt;&lt;/script&gt;
+	&lt;noscript&gt;
+		&lt;a href="http://www.51.la/?19024652" target="_blank"&gt;&lt;img alt="&amp;#x6211;&amp;#x8981;&amp;#x5566;&amp;#x514D;&amp;#x8D39;&amp;#x7EDF;&amp;#x8BA1;" src="http://img.users.51.la/19024652.asp" style="border:none"
+			/&gt;&lt;/a&gt;
+	&lt;/noscript&gt;
+
+&lt;/html&gt;</value>
+    <comment>微页整体页面</comment>
+  </data>
+  <data name="weiHtmlContent" xml:space="preserve">
+    <value>&lt;div class="col-sm-6 col-md-4 col-lg-3 "&gt;
+				&lt;div class="thumbnail"&gt;
+					&lt;a href="{$二合一链接$}"&gt;
+						&lt;img class="lazy" src="http://zfcode.com/q/null.png" width="300" height="300" data-src="{$主图$}"
+							alt="Headroom.js"&gt;&lt;/a&gt;
+					&lt;div class="caption"&gt;
+						&lt;h4&gt;
+							&lt;a href="{$二合一链接$}"&gt;券后价：{$券后价$}元&lt;/a&gt;
+						&lt;/h4&gt;
+                        &lt;span &gt;{$文案$}&lt;/span&gt;
+						&lt;div class="kwd" id="kwd"&gt;
+							&lt;span&gt;领券+下单：{$二合一链接$}&lt;/span&gt;&lt;br/&gt;
+							&lt;span style="font-size:10px"&gt;点击图片或者直接复制虚线框内所有内容，打开手机淘宝，即可领券下单.{$淘口令$}&lt;/span&gt;&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;</value>
+    <comment>微页内容页</comment>
+  </data>
+</root>

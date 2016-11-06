@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 using DevExpress.XtraExport.Helpers;
 using FTools.HTTP;
 using Newtonsoft.Json;
+using Services;
 
 namespace dataoke_api_QQ
 {
@@ -30,7 +32,7 @@ namespace dataoke_api_QQ
         {
 
             // Root d = JsonConvert.DeserializeAnonymousType<Root>(result, new QQApiEntity());
-            StringBuilder str=new StringBuilder();
+            StringBuilder str = new StringBuilder();
             if (_resultItems != null)
             {
                 str.Append(DateTime.Now.ToString("yyyy-M-d HH:mm") + " 新一波福利，手慢无！" + _ + "别说我没告诉你!" + _);
@@ -54,7 +56,7 @@ namespace dataoke_api_QQ
             QQApiEntity d = JsonConvert.DeserializeObject<QQApiEntity>(result);
             foreach (ResultItem item in d.data.result)
             {
-                new Thread(delegate() { item._Image = GetImage(item.Pic); }) {IsBackground = true}.Start();
+                new Thread(delegate() { item._Image = GetImage(item.Pic); }) { IsBackground = true }.Start();
             }
             gridControl1.DataSource = d.data.result;
         }
@@ -90,13 +92,13 @@ namespace dataoke_api_QQ
             new XJHTTP().CleanAll();//清除IE/Webbrowser所有内容 (注意,调用本方法需要管理员权限运行) CleanHistory();清空历史记录  CleanCookie(); 清空Cookie CleanTempFiles(); 清空临时文件
             */
             //string url = "http://img.ithome.com/images/v2.1/noavatar.png";//请求地址
-                    string res = string.Empty;//请求结果,请求类型不是图片时有效
-                    HttpHelpers helper = new HttpHelpers();//发起请求对象
-                    HttpItems items = new HttpItems();//请求设置对象
-                    HttpResults hr = new HttpResults();//请求结果
-                    items.URL = url;//设置请求地址
-                    items.ResultType = ResultType.Byte;//设置请求返回值类型为Byte
-                    return helper.GetImg(helper.GetHtml(items));//picImage图像控件Name
+            string res = string.Empty;//请求结果,请求类型不是图片时有效
+            HttpHelpers helper = new HttpHelpers();//发起请求对象
+            HttpItems items = new HttpItems();//请求设置对象
+            HttpResults hr = new HttpResults();//请求结果
+            items.URL = url;//设置请求地址
+            items.ResultType = ResultType.Byte;//设置请求返回值类型为Byte
+            return helper.GetImg(helper.GetHtml(items));//picImage图像控件Name
             //return null;
         }
 
@@ -112,7 +114,51 @@ namespace dataoke_api_QQ
             if (selectRows.Count <= 0)
                 return null;
             //dt = gridView1.GetDataRow(0).Table;
-            return selectRows.Select(i => ((List<ResultItem>) gridView1.DataSource)[i]).ToList();
+            return selectRows.Select(i => ((List<ResultItem>)gridView1.DataSource)[i]).ToList();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            List<ResultItem> r = GetSelectRow();
+            if (r == null || r.Count <= 0)
+            {
+                MessageBox.Show("请先选择产品");
+                return;
+            }
+            button3.Enabled = false;
+            new Thread(delegate()
+            {
+                try
+                {
+                    string html = CreateWeiHtml.Get(r, dataoke_api.weiHtml, dataoke_api.weiHtmlContent, dataoke_api.quan_template,
+                  "mm_27864031_11496121_48984395");
+                    WriteHtml(html);
+                    MessageBox.Show("生成网页完成!");
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+                button3.Invoke(new Action(delegate
+                {
+                    button3.Enabled = true;
+                }));
+            }) { IsBackground = true }.Start();
+        }
+
+        public void WriteHtml(string html)
+        {
+            string path = System.Windows.Forms.Application.StartupPath + "/html";
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            FileStream fs = new FileStream(path + "/tk_" + DateTime.Now.ToString("yyyyMMddHHmm") + ".html", FileMode.OpenOrCreate);
+            StreamWriter sw = new StreamWriter(fs, Encoding.UTF8);
+            sw.Write(html);
+            sw.Close();
+            fs.Close();
         }
     }
 }

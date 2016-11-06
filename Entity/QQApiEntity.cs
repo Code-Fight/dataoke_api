@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
-using FTools.HTTP;
+using System.Net.Mime;
 
 public class ResultItem
 {

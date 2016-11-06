@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "大淘客获取", "大淘客获取\大淘客获取.csproj", "{ABE35DD4-DFF6-4199-9864-051583DEB8C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTools", "FTools\FTools.csproj", "{C0331D44-565C-4830-8189-75D2B8242C2D}"
@@ -8,6 +10,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "大淘客接口", "大淘客接口\大淘客接口.csproj", "{70CE870A-A135-4B49-8DAA-1455249C0D69}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataoke_api_QQ", "dataoke_api_QQ\dataoke_api_QQ.csproj", "{32F9EC2E-E85D-43F6-B32A-88A818C0098F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{319D1B13-3E51-4B6C-AB98-4549F39D7A2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,14 @@ Global
 		{32F9EC2E-E85D-43F6-B32A-88A818C0098F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F9EC2E-E85D-43F6-B32A-88A818C0098F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32F9EC2E-E85D-43F6-B32A-88A818C0098F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319D1B13-3E51-4B6C-AB98-4549F39D7A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319D1B13-3E51-4B6C-AB98-4549F39D7A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319D1B13-3E51-4B6C-AB98-4549F39D7A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319D1B13-3E51-4B6C-AB98-4549F39D7A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
