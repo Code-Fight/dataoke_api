@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using DevExpress.XtraExport.Helpers;
 using FTools.Encode;
 using FTools.HTTP;
+using FTools.ImgTool;
 using Newtonsoft.Json;
 using Services;
 
@@ -201,6 +202,7 @@ namespace dataoke_api_QQ
 
             Bitmap img = new Bitmap(r[0]._Image);
             img.Save(System.Windows.Forms.Application.StartupPath+"/1.png", System.Drawing.Imaging.ImageFormat.Png);
+            ImageHelper.CompressJpeg(System.Windows.Forms.Application.StartupPath + "/1.png", img.Width-1,(long)50);
             ToWeiBo(r[0]);
         }
 

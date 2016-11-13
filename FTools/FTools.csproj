@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Encode\Encode.cs" />
     <Compile Include="HTTP\HttpCode.cs" />
+    <Compile Include="ImgTool\ImageHelper.cs" />
     <Compile Include="Json\JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
