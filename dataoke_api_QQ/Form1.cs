@@ -179,7 +179,7 @@ namespace dataoke_api_QQ
                               "现价：{0} 【用券价：{1}】" +Encode.UrlDecode("%0A")+
                               "{2}" +Encode.UrlDecode("%0A")+
                               "优惠券地址：{3}" +Encode.UrlDecode("%0A")+
-                              "购买地址：{4}", item.Org_Price,item.Price, item.Introduce, item.Quan_link, item.ali_click));
+                              "购买地址：{4}"+Encode.UrlDecode("%0A")+txt_sina_ht.Text, item.Org_Price,item.Price, item.Introduce, item.Quan_link, item.ali_click));
         }
 
         private void _sina_UpdateUIEvent(object a)
@@ -187,6 +187,11 @@ namespace dataoke_api_QQ
             UpdateUi(a.ToString());
         }
 
+        /// <summary>
+        /// 发布微博
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
              List<ResultItem> r = GetSelectRow();

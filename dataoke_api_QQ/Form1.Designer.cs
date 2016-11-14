@@ -43,6 +43,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txt_sina_ht = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -136,6 +137,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.txt_sina_ht);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.button3);
@@ -205,6 +207,13 @@
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             // 
+            // txt_sina_ht
+            // 
+            this.txt_sina_ht.Location = new System.Drawing.Point(550, 11);
+            this.txt_sina_ht.Name = "txt_sina_ht";
+            this.txt_sina_ht.Size = new System.Drawing.Size(100, 21);
+            this.txt_sina_ht.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -241,6 +250,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txt_sina_ht;
     }
 }
 
