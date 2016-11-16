@@ -19,7 +19,7 @@ namespace dataoke_api_QQ
 {
     public partial class Form1 : Form
     {
-       
+
         private NetDimension.OpenAuth.Sina.SinaWeiboClient openAuth;
         private Sina _sina = null;
         public Form1(NetDimension.OpenAuth.Sina.SinaWeiboClient client)
@@ -169,17 +169,17 @@ namespace dataoke_api_QQ
 
         public void ToWeiBo(ResultItem item)
         {
-            if (_sina==null)
+            if (_sina == null)
             {
                 _sina = new Sina(openAuth);
-                _sina.UpdateUIEvent+=_sina_UpdateUIEvent;
+                _sina.UpdateUIEvent += _sina_UpdateUIEvent;
             }
-            _sina.PostMsg(new FileInfo(System.Windows.Forms.Application.StartupPath + "/1.png"), 
-                string.Format(item.Title +Encode.UrlDecode("%0A")+
-                              "现价：{0} 【用券价：{1}】" +Encode.UrlDecode("%0A")+
-                              "{2}" +Encode.UrlDecode("%0A")+
-                              "优惠券地址：{3}" +Encode.UrlDecode("%0A")+
-                              "购买地址：{4}"+Encode.UrlDecode("%0A")+txt_sina_ht.Text, item.Org_Price,item.Price, item.Introduce, item.Quan_link, item.ali_click));
+            _sina.PostMsg(new FileInfo(System.Windows.Forms.Application.StartupPath + "/1.png"),
+                string.Format(item.Title + Encode.UrlDecode("%0A") +
+                              "现价：{0} 【用券价：{1}】" + Encode.UrlDecode("%0A") +
+                              "{2}" + Encode.UrlDecode("%0A") +
+                              "优惠券地址：{3}" + Encode.UrlDecode("%0A") +
+                              "购买地址：{4}" + Encode.UrlDecode("%0A") + txt_sina_ht.Text, item.Org_Price, item.Price, item.Introduce, item.Quan_link, item.ali_click));
         }
 
         private void _sina_UpdateUIEvent(object a)
@@ -194,21 +194,34 @@ namespace dataoke_api_QQ
         /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
-             List<ResultItem> r = GetSelectRow();
-              if (r == null || r.Count <= 0)
+            List<ResultItem> ritem = GetSelectRow();
+            if (ritem == null || ritem.Count <= 0)
             {
                 MessageBox.Show("请先选择产品");
                 return;
             }
 
-//              File.Delete(System.Windows.Forms.Application.StartupPath + "/1.png");
-//
-//                r[0]._Image.Save(System.Windows.Forms.Application.StartupPath+"/1.png", System.Drawing.Imaging.ImageFormat.Png);
+            //              File.Delete(System.Windows.Forms.Application.StartupPath + "/1.png");
+            //
+            //                r[0]._Image.Save(System.Windows.Forms.Application.StartupPath+"/1.png", System.Drawing.Imaging.ImageFormat.Png);
 
-            Bitmap img = new Bitmap(r[0]._Image);
-            img.Save(System.Windows.Forms.Application.StartupPath+"/1.png", System.Drawing.Imaging.ImageFormat.Png);
-            ImageHelper.CompressJpeg(System.Windows.Forms.Application.StartupPath + "/1.png", img.Width-1,(long)50);
-            ToWeiBo(r[0]);
+
+            new Thread(delegate()
+            {
+                foreach (ResultItem r in ritem)
+                {
+                    Bitmap img = new Bitmap(r._Image);
+                    img.Save(System.Windows.Forms.Application.StartupPath + "/1.png",
+                        System.Drawing.Imaging.ImageFormat.Png);
+                    ImageHelper.CompressJpeg(System.Windows.Forms.Application.StartupPath + "/1.png", img.Width - 1,
+                        (long)50);
+                    ToWeiBo(r);
+                    Thread.Sleep(60 * 1000 * 4);
+                }
+            }) { IsBackground = true }.Start();
+
+
+
         }
 
 
@@ -216,9 +229,9 @@ namespace dataoke_api_QQ
         {
             richTextBox1.Invoke(new Action(delegate
             {
-                richTextBox1.Text += string.Format("{0} {1}"+_, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), msg);
+                richTextBox1.Text += string.Format("{0} {1}" + _, DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), msg);
             }));
         }
-        
+
     }
 }
