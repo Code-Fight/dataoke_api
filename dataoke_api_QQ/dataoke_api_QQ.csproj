@@ -76,7 +76,6 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,18 +103,6 @@
     <None Include="Resources\2016112121421859.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WeiboSDK-master\NetDimension.OpenAuth.Sina\NetDimension.OpenAuth.Sina.csproj">
-      <Project>{76fc909d-bda2-4fce-9b9f-b503a13df44f}</Project>
-      <Name>NetDimension.OpenAuth.Sina</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\WeiboSDK-master\NetDimension.OpenAuth.Winform\NetDimension.OpenAuth.Winform.csproj">
-      <Project>{0d1f893b-af94-4e52-b972-a5d40e1db670}</Project>
-      <Name>NetDimension.OpenAuth.Winform</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\WeiboSDK-master\NetDimension.OpenAuth\NetDimension.OpenAuth.csproj">
-      <Project>{38b68338-7fc0-4ab7-b8a7-674e0bcbf899}</Project>
-      <Name>NetDimension.OpenAuth</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{8f643833-6f55-49bb-9712-3c8de5c1ebe4}</Project>
       <Name>Entity</Name>

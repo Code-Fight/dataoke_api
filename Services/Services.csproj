@@ -64,7 +64,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="TopSdk">
-      <HintPath>..\..\Taobao-Top-Sdk\TopSdk.dll</HintPath>
+      <HintPath>..\..\..\Taobao-Top-Sdk\Taobao-Top-Sdk\TopSdk.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -78,18 +78,6 @@
     <Compile Include="TkTpwd.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WeiboSDK-master\NetDimension.OpenAuth.Sina\NetDimension.OpenAuth.Sina.csproj">
-      <Project>{76fc909d-bda2-4fce-9b9f-b503a13df44f}</Project>
-      <Name>NetDimension.OpenAuth.Sina</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\WeiboSDK-master\NetDimension.OpenAuth.Winform\NetDimension.OpenAuth.Winform.csproj">
-      <Project>{0d1f893b-af94-4e52-b972-a5d40e1db670}</Project>
-      <Name>NetDimension.OpenAuth.Winform</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\WeiboSDK-master\NetDimension.OpenAuth\NetDimension.OpenAuth.csproj">
-      <Project>{38b68338-7fc0-4ab7-b8a7-674e0bcbf899}</Project>
-      <Name>NetDimension.OpenAuth</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}</Project>
       <Name>Entity</Name>
@@ -97,6 +85,18 @@
     <ProjectReference Include="..\FTools\FTools.csproj">
       <Project>{C0331D44-565C-4830-8189-75D2B8242C2D}</Project>
       <Name>FTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetDimension.OpenAuth.Sina\NetDimension.OpenAuth.Sina.csproj">
+      <Project>{76fc909d-bda2-4fce-9b9f-b503a13df44f}</Project>
+      <Name>NetDimension.OpenAuth.Sina</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetDimension.OpenAuth.Winform\NetDimension.OpenAuth.Winform.csproj">
+      <Project>{0d1f893b-af94-4e52-b972-a5d40e1db670}</Project>
+      <Name>NetDimension.OpenAuth.Winform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NetDimension.OpenAuth\NetDimension.OpenAuth.csproj">
+      <Project>{38b68338-7fc0-4ab7-b8a7-674e0bcbf899}</Project>
+      <Name>NetDimension.OpenAuth</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

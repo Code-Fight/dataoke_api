@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "大淘客获取", "大淘客获取\大淘客获取.csproj", "{ABE35DD4-DFF6-4199-9864-051583DEB8C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FTools", "FTools\FTools.csproj", "{C0331D44-565C-4830-8189-75D2B8242C2D}"
@@ -15,11 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{8F643833-6F55-49BB-9712-3C8DE5C1EBE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDimension.OpenAuth", "..\WeiboSDK-master\NetDimension.OpenAuth\NetDimension.OpenAuth.csproj", "{38B68338-7FC0-4AB7-B8A7-674E0BCBF899}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDimension.OpenAuth", "NetDimension.OpenAuth\NetDimension.OpenAuth.csproj", "{38B68338-7FC0-4AB7-B8A7-674E0BCBF899}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDimension.OpenAuth.Sina", "..\WeiboSDK-master\NetDimension.OpenAuth.Sina\NetDimension.OpenAuth.Sina.csproj", "{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDimension.OpenAuth.Winform", "NetDimension.OpenAuth.Winform\NetDimension.OpenAuth.Winform.csproj", "{0D1F893B-AF94-4E52-B972-A5D40E1DB670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDimension.OpenAuth.Winform", "..\WeiboSDK-master\NetDimension.OpenAuth.Winform\NetDimension.OpenAuth.Winform.csproj", "{0D1F893B-AF94-4E52-B972-A5D40E1DB670}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDimension.OpenAuth.Sina", "NetDimension.OpenAuth.Sina\NetDimension.OpenAuth.Sina.csproj", "{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,14 +53,14 @@ Global
 		{38B68338-7FC0-4AB7-B8A7-674E0BCBF899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38B68338-7FC0-4AB7-B8A7-674E0BCBF899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38B68338-7FC0-4AB7-B8A7-674E0BCBF899}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D1F893B-AF94-4E52-B972-A5D40E1DB670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D1F893B-AF94-4E52-B972-A5D40E1DB670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D1F893B-AF94-4E52-B972-A5D40E1DB670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D1F893B-AF94-4E52-B972-A5D40E1DB670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76FC909D-BDA2-4FCE-9B9F-B503A13DF44F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
